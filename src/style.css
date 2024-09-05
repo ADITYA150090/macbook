@@ -1,0 +1,105 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#parent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#text {
+    font-size: 48px;
+    padding-top: 95px;
+    font-weight: 700;
+    /* Adjust as needed */
+    position: absolute;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    animation: colorChange 5s infinite;
+    background-image: linear-gradient( to right, rgb(181, 29, 29), rgb(225, 0, 255), rgb(0, 13, 255), green, cyan, rgb(255, 0, 0), violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 400%;
+}
+
+
+/* Create animation for changing colors */
+
+@keyframes colorChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#para {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+    text-decoration: wavy;
+    text-align: center;
+    font-weight: 200;
+    color: aliceblue;
+}
+
+#head {
+    font-size: 32px;
+    font-weight: 100;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 72px;
+    /* Adjust size as needed */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    animation: glowEffect 3s infinite alternate;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.8), 0 0 70px rgba(0, 255, 255, 0.8);
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+
+/* Animation for glowing light and blur effect */
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.8);
+    }
+}
+
+#nav {}
